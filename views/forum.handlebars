@@ -1,0 +1,73 @@
+<h2>{{bar_name}} Happy Hour Forum</h2>
+
+{{!-- Header/ instructions on how this website works --}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <p align="middle">How it works:</p>
+            <p>Restaurants & bars are changing up their happy hours all the time. Here, you can expect to see the most
+                up-to-date happy hour special for every bar. The top comment (the comment with the most thumbs up) can
+                be interpreted as the most current happy hour.</p>
+            <p>If you find out that the happy hour has changed, feel free to leave a comment with the new special, which
+                eventually will be the top comment as it gets more thumbs up.</p>
+            <p>As more thumbs down are added to the comment it will be bumped down the list. You can interpret the
+                comments with the most amount of thumbs down as a happy hour that is no longer in service.</p>
+            <p align="middle">Happy drinking!</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {{!-- Menu bar --}}
+        <div class="col-md-2">
+            <p><a href="/">Home</a></p>
+            <p><a href="/contact">Contact Us</a></p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="addForum">Add
+                to Forum</button>
+
+        </div>
+        {{!-- End of menu bar --}}
+        {{!-- Forum section with user's comments --}}
+        <div class="col-md-10">
+            <p align="middle">{{comments}}</p>
+            <p align="right">{{thumbs_up}} {{thumbs_down}}</p>
+            <p align="left">User:{{userName}}</p>
+            <p align="right">{{timeStamp}}</p>
+        </div>
+        {{!-- End of comment section --}}
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Your Bar!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                {{!-- Bar name input box --}}
+                <div class="form-group">
+                    <label for="usr">User Name</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                {{!-- End of bar name input box --}}
+
+                <div class="form-group">
+                    <label for="comment">Spill the tea. How's the new happy hour?</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Add</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>

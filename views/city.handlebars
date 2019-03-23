@@ -1,0 +1,62 @@
+<h2>{{city}} Bars</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{bar_name}} {{bar_image}}
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Your Bar!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                {{!-- Select your city with the dropdown menu --}}
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        City
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Austin</a>
+                        <a class="dropdown-item" href="#">Houston</a>
+                        <a class="dropdown-item" href="#">Dallas</a>
+                    </div>
+                </div>
+                {{!-- End of dropdwon --}}
+
+                {{!-- Bar name input box --}}
+                <div class="form-group">
+                    <label for="usr">Bar Name</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                {{!-- End of bar name input box --}}
+
+                {{!-- Image input form --}}
+                <form action="/action_page.php">
+                    <input type="file" name="pic" accept="image/*">
+                </form>
+                {{!-- End of image input box --}}
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Add</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<p id="add">Don't see your bar? <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="addIt">Add it!</button></p>
