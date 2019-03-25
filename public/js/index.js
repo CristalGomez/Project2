@@ -102,3 +102,13 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
+
+anime({
+  targets: '#title',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutSine',
+  duration: 1500,
+  delay: function(el, i) { return i * 250 },
+  direction: 'alternate',
+  loop: false
+});
