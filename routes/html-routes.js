@@ -20,6 +20,10 @@ module.exports = function(app) {
     res.render("city", {title:express})
   });
 
+  app.get("/forum", function(req, res){
+    res.render("forum", {title:express})
+  });
+
   // index route loads view.html
   // app.get("/", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/"));

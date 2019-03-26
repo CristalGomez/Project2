@@ -104,6 +104,8 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
 //   $('#myModal').modal({ show: true })
 // })
 
+
+
 $(".btn").on("click", function(){
   console.log("hi")
   $("#myModal").modal({show: true})
