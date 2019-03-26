@@ -5,8 +5,16 @@ h1{
     padding: 10px;
 }
 
+#barsTitle {
+    font-family: 'Pompiere', cursive;
+    text-align: center;
+    padding: 20px;
+    font-size: 60px;
+}
+
 h2 {
     font-family: 'Pompiere', cursive;
+    text-align: center;
 }
 body{
     margin: auto
@@ -28,3 +36,14 @@ body{
     font-size: 25px;
     font-family: 'Pompiere', cursive;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    padding: 10px;
+  }
