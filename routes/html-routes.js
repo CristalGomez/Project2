@@ -16,8 +16,12 @@ module.exports = function(app) {
     res.render("index", {title:express});
   })
 
-  app.get("/bars", function(req, res){
-    res.render("city", {title:express})
+  app.get("/bars/:city", function(req, res){
+    res.render("city", {city:req.params.city})
+  });
+
+  app.get("/forum", function(req, res){
+    res.render("forum", {title:express})
   });
 
   // index route loads view.html

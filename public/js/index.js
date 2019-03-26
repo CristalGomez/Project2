@@ -104,9 +104,9 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
 // })
     // $('#myModal').on('shown.bs.modal', function () {
 
-$(document).on("click",".btn", function(){
-  console.log("hi")
-  $("#myModal").modal({show: true})
+// $(document).on("click","#openModal", function(){
+//   console.log("hi")
+//   $("#myModal").modal({show: true})
   
   
   // anime({
@@ -119,4 +119,4 @@ $(document).on("click",".btn", function(){
     //   loop: false
     // });
   
-  });
+  // });  
