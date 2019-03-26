@@ -99,23 +99,24 @@ $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 
-// $('#myModal').on('shown.bs.modal', function () {
 
 //   $('#myModal').modal({ show: true })
 // })
+    // $('#myModal').on('shown.bs.modal', function () {
 
-$(".btn").on("click", function(){
-  console.log("hi")
-  $("#myModal").modal({show: true})
-})
-
-
-// anime({
-//   targets: '#title',
-//   strokeDashoffset: [anime.setDashoffset, 0],
-//   easing: 'easeInOutSine',
-//   duration: 1500,
-//   delay: function(el, i) { return i * 250 },
-//   direction: 'alternate',
-//   loop: false
-// });
+// $(document).on("click","#openModal", function(){
+//   console.log("hi")
+//   $("#myModal").modal({show: true})
+  
+  
+  // anime({
+    //   targets: '#title',
+    //   strokeDashoffset: [anime.setDashoffset, 0],
+    //   easing: 'easeInOutSine',
+    //   duration: 1500,
+    //   delay: function(el, i) { return i * 250 },
+    //   direction: 'alternate',
+    //   loop: false
+    // });
+  
+  // });  
