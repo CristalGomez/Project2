@@ -99,10 +99,10 @@ $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 
-// $('#myModal').on('shown.bs.modal', function () {
 
 //   $('#myModal').modal({ show: true })
 // })
+    // $('#myModal').on('shown.bs.modal', function () {
 
 $(".btn").on("click", function(){
   console.log("hi")
