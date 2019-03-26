@@ -16,6 +16,10 @@ module.exports = function(app) {
     res.render("index");
   })
 
+  app.get("/bars", function(req, res){
+    res.render("city")
+  })
+
   app.get("/bars/:city", function(req, res){
     res.render("city", {
       city:req.params.city

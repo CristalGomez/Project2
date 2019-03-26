@@ -46,4 +46,9 @@ body{
     color: black;
     text-align: center;
     padding: 10px;
-  }
+}
+
+
+.modal-dialog {
+    background: white
+}
