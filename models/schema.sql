@@ -1,2 +1,3 @@
 DROP DATABASE IF EXISTS bars_db;
 CREATE DATABASE bars_db;
+USE bars_db;
