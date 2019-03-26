@@ -3,7 +3,6 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var path = require("path");
 var bodyParser = require("body-parser");
-
 var db = require("./models");
 
 var app = express();
@@ -13,6 +12,7 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, './public')))
+app.use(express.static(path.join(__dirname, './public/js')))
 
 // Handlebars
 app.engine(
@@ -22,6 +22,7 @@ app.engine(
   })
 );
 app.set("view engine", "handlebars");
+app.set('views', __dirname + '/views');
 
 // Routes
 require("./routes/bars-routes")(app);
