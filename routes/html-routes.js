@@ -17,7 +17,7 @@ module.exports = function(app) {
   })
 
   app.get("/bars", function(req, res){
-    res.render("layout", {title:express})
+    res.render("city", {title:express})
   });
 
   // index route loads view.html

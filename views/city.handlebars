@@ -1,4 +1,4 @@
-<h2>{{city}} Bars</h2>
+<h2 id="barsTitle">{{city}} Bars</h2>
 
 <div class="container">
     <div class="row">
@@ -9,7 +9,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal" tabindex="-1" role="dialog">
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -49,8 +49,8 @@
 
             </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Add</button>
+            <div class="modal-footer" id="myModal">
+                <button type="button" data-target="myModal" class="btn btn-primary addIt">Add</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -59,4 +59,8 @@
 </div>
 
 <!-- Button trigger modal -->
-<p id="add">Don't see your bar? <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="addIt">Add it!</button></p>
+<div class="footer">
+<p id="add">Don't see your bar? <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target="myModal" >Add it!</button></p>
+</div>
+
+
