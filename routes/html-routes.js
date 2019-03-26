@@ -8,21 +8,25 @@ var path = require("path");
 var express = require("express")
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  app.get("/", function(req, res){
+  app.get("/", function (req, res) {
     res.render("index");
   })
 
-  app.get("/bars/:city", function(req, res){
+  app.get("/bars/:city", function (req, res) {
     res.render("city", {
-      city:req.params.city
+      city: req.params.city
     })
   });
+  
+  app.get("/bars", function (req, res) {
+    res.render("city")
+  });
 
-  app.get("/forum", function(req, res){
+  app.get("/forum", function (req, res) {
     res.render("forum")
   });
 
