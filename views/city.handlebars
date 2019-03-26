@@ -10,12 +10,17 @@
 
 <!-- Button trigger modal -->
 <div class="footer">
-<p id="add">Don't see your bar? <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target="myModal" >Add it!</button></p>
+<p id="add">Don't see your bar?
+</p>
+    <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target=".testModal" >Add it!</button>
 </div>
 
 
 <!-- Modal -->
-<div class="modal" id="myModal" tabindex="-1" role="dialog">
+
+<!-- Small modal -->
+
+<div class="modal testModal"  tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -27,17 +32,7 @@
 
             <div class="modal-body">
                 {{!-- Select your city with the dropdown menu --}}
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        City
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Austin</a>
-                        <a class="dropdown-item" href="#">Houston</a>
-                        <a class="dropdown-item" href="#">Dallas</a>
-                    </div>
-                </div>
+                {{city}}
                 {{!-- End of dropdwon --}}
 
                 {{!-- Bar name input box --}}
