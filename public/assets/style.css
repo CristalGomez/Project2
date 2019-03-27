@@ -1,19 +1,27 @@
 body {
-    background: url(../assets/images/bg.jpg);
+    background: url("");
     margin: 0;
     opacity: 30%;
+    background-size: cover;
+    background: url(../assets//images/bg.jpg);
 }
+
 
 body.austin {
-    background: url(../assets/images/austin.jpg)
+    background-size: cover;
+    background: url(../assets/images/austin.jpg);
 }
 
-body.houston {
-    background: url(../assets/images/houston.jpg)
+.houston {
+    background-size: cover;
+
+    background: url(../assets/images/houston.jpg);
 }
 
-body.dallas {
-    background: url(../assets/images/dallas.jpg)
+.dallas {
+    background-size: cover;
+
+    background: url(../assets/images/dallas.jpg);
 }
 h1{
     font-family: 'Poiret One', cursive;
@@ -104,7 +112,7 @@ body{
 .card {  
     font-family: 'Pompiere', cursive;
     padding: 20px;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     float: left;
     width: 60%;

@@ -118,7 +118,7 @@ hoverBtn1.onmouseover = function(){
   body.className = "austin";
 }
 
-hoverBtn12.onmouseover = function(){
+hoverBtn2.onmouseover = function(){
   body.className = "houston";
 }
 
