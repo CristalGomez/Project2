@@ -2,55 +2,57 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div align="middle" class="col-md-12">
             {{bar_name}} {{bar_image}}
+
+            <p>Don't see your bar? <button type="button" class="btn btn-primary btn-dark" data-toggle="modal"
+                    data-target="#barsModal">
+                    Add It
+                </button></p>
         </div>
     </div>
 </div>
 
-<!-- Button trigger modal -->
+
 <div class="footer">
-<p id="add">Don't see your bar?
-</p>
-    <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target=".testModal" >Add it!</button>
+    <div class="container text-center">
+        <p>Home | Github | Contact Us</p>
+    </div>
 </div>
 
+
+
 <!-- Modal -->
-<div class="modal testModal"  tabindex="-1" role="dialog">
-    <div class="modal-dialog col" role="document">
-        <div class="-modal-content">
+<div class="modal fade" id="barsModal" tabindex="-1" role="dialog" aria-labelledby="barsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Add Your Bar!</h5>
+                <h5 class="modal-title" id="barsModalLabel">Add a Bar to the {{city}} Page</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
-            <div class="modal-body">
-                {{!-- Select your city with the dropdown menu --}}
-                {{city}}
-                {{!-- End of dropdwon --}}
-
+            <div align="left" class="modal-body">
                 {{!-- Bar name input box --}}
                 <div class="form-group">
-                    <label for="usr">Bar Name</label>
+                    <label for="usr">Bar Name:</label>
                     <input type="text" class="form-control" id="usr">
                 </div>
                 {{!-- End of bar name input box --}}
 
                 {{!-- Image input form --}}
                 <form action="/action_page.php">
+                    <p>Bar Image:</p>
                     <input type="file" name="pic" accept="image/*">
                 </form>
                 {{!-- End of image input box --}}
-
             </div>
-
-            <div class="modal-footer" id="myModal">
-                <button type="button" data-target="myModal" class="btn btn-primary addIt">Add</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Add</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
-        
     </div>
 </div>
+
+
