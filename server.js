@@ -5,6 +5,9 @@ var path = require("path");
 var bodyParser = require("body-parser");
 var db = require("./models");
 
+const TextToSVG = require('text-to-svg');
+
+
 var app = express();
 var PORT = process.env.PORT || 8080;
 
