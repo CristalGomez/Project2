@@ -5,55 +5,35 @@
     <div class="row">
         <div class="col-md-12">
             <p align="middle">How it works:</p>
-            <p>Restaurants & bars are changing up their happy hours all the time. Here, you can expect to see the most
-                up-to-date happy hour special for every bar. The top comment (the comment with the most thumbs up) can
-                be interpreted as the most current happy hour.</p>
-            <p>If you find out that the happy hour has changed, feel free to leave a comment with the new special, which
-                eventually will be the top comment as it gets more thumbs up.</p>
-            <p>As more thumbs down are added to the comment it will be bumped down the list. You can interpret the
-                comments with the most amount of thumbs down as a happy hour that is no longer in service.</p>
-            <p align="middle">Happy drinking!</p>
+            <p id="instructions">Top comment (comment with the most thumbs up) can be interpreted as the most current
+                special. As the comment recieves more thumbs down, it will be bumped down on the list and you can assume
+                that this special is no longer current. If you don't see the most current happy hour, feel free to add
+                it! Happy drinking!</p>
+            <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target=".testModal">Add to
+                Forum</button>
         </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-        {{!-- Menu bar --}}
-        <div class="col-md-2">
-            <p><a href="/">Home</a></p>
-            <p><a href="/contact">Contact Us</a></p>
-
-
-
-                <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target=".testModal" >Add to Forum</button>
-            <!-- Button trigger modal -->
-            {{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="addForum">Add
-                to Forum</button> --}}
-
+        <div class="col-md-12">
+            {{forum}}
         </div>
-        {{!-- End of menu bar --}}
-        {{!-- Forum section with user's comments --}}
-        <div class="col-md-10">
-            <p align="middle">{{comments}}</p>
-            <p align="right">{{thumbs_up}} {{thumbs_down}}</p>
-            <p align="left">User:{{userName}}</p>
-            <p align="right">{{timeStamp}}</p>
-        </div>
-        {{!-- End of comment section --}}
     </div>
 </div>
 
 
-<!-- Button trigger modal -->
+
 <div class="footer">
-<p id="add">Don't see your bar?
-</p>
-    <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target=".testModal" >Add it!</button>
+    <div class="container text-center">
+        <p><a target="blank" href="/api/bars">API</a> | <a href="https://github.com/CristalGomez/Project2"
+                target="blank">Github</a> | Home | Contact Us
+    </div>
 </div>
 
 <!-- Modal -->
-<div class="modal testModal"  tabindex="-1" role="dialog">
+<div class="modal testModal" tabindex="-1" role="dialog">
     <div class="modal-dialog col" role="document">
         <div class="-modal-content">
             <div class="modal-header">
@@ -63,24 +43,24 @@
                 </button>
             </div>
 
-                {{!-- Bar name input box --}}
-                <div class="form-group">
-                    <label for="usr">User Name</label>
-                    <input type="text" class="form-control" id="usr">
-                </div>
-                {{!-- End of bar name input box --}}
-
-                <div class="form-group">
-                    <label for="comment">Spill the tea. How's the new happy hour?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                </div>
+            {{!-- Bar name input box --}}
+            <div class="form-group">
+                <label for="usr">User Name</label>
+                <input type="text" class="form-control" id="usr">
             </div>
+            {{!-- End of bar name input box --}}
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Add</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="form-group">
+                <label for="comment">Spill the tea. How's the new happy hour?</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
             </div>
         </div>
-        
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
     </div>
+
+</div>
 </div>

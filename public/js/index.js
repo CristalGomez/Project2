@@ -109,24 +109,29 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
 //   $("#myModal").modal({show: true})
 
 
-// anime({
-//   targets: '#title',
-//   strokeDashoffset: [anime.setDashoffset, 0],
-//   easing: 'easeInOutSine',
-//   duration: 1500,
-//   delay: function(el, i) { return i * 250 },
-//   direction: 'alternate',
-//   loop: false
-// });
+var hoverBtn1 = document.getElementById("card1");
+var hoverBtn2 = document.getElementById("card2");
+var hoverBtn3 = document.getElementById("card3");
+var body = document.body;
 
-// });  
+hoverBtn1.onmouseover = function(){
+  body.className = "austin";
+}
 
+hoverBtn12.onmouseover = function(){
+  body.className = "houston";
+}
 
-const textToSVG = TextToSVG.loadSync();
+hoverBtn3.onmouseover = function(){
+  body.className = "dallas";
+}
+hoverBtn1.onmouseout = function(){
+  body.className = ""
+}
+hoverBtn2.onmouseout = function(){
+  body.className = ""
+}
+hoverBtn3.onmouseout = function(){
+  body.className = ""
+}
 
-const attributes = { fill: 'red', stroke: 'black' };
-const options = { x: 0, y: 0, fontSize: 72, anchor: 'top', attributes: attributes };
-
-const svg = textToSVG.getSVG('hi', options);
-
-console.log(svg);
