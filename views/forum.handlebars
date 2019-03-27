@@ -1,16 +1,20 @@
-<h2>{{bar_name}} Happy Hour Forum</h2>
+<h2 id="forumTitle">{{bar_name}} Happy Hour Forum</h2>
 
 {{!-- Header/ instructions on how this website works --}}
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div align="middle" class="col-md-12">
             <p align="middle">How it works:</p>
-            <p id="instructions">Top comment (comment with the most thumbs up) can be interpreted as the most current
-                special. As the comment recieves more thumbs down, it will be bumped down on the list and you can assume
+            <p id="instructions">Top comment (comment with the most <i class="fas fa-thumbs-up"></i>) can be interpreted
+                as the most current
+                special. As the comment recieves more <i class="fas fa-thumbs-down"></i>, it will be bumped down on the
+                list and you can assume
                 that this special is no longer current. If you don't see the most current happy hour, feel free to add
                 it! Happy drinking!</p>
-            <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target=".testModal">Add to
-                Forum</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-dark" data-toggle="modal" data-target="#forumModal">
+                Update Forum
+            </button>
         </div>
     </div>
 </div>
@@ -24,7 +28,6 @@
 </div>
 
 
-
 <div class="footer">
     <div class="container text-center">
         <p><a target="blank" href="/api/bars">API</a> | <a href="https://github.com/CristalGomez/Project2"
@@ -33,34 +36,24 @@
 </div>
 
 <!-- Modal -->
-<div class="modal testModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog col" role="document">
-        <div class="-modal-content">
+<div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="forumModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Add Your Bar!</h5>
+                <h5 class="modal-title" id="forumModalLabel">{{Bar_name}} Happy Hour Update</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
-            {{!-- Bar name input box --}}
-            <div class="form-group">
-                <label for="usr">User Name</label>
-                <input type="text" class="form-control" id="usr">
+            <div align="middle" class="modal-body">
+                <p>Example: The new happy hour is now from 4pm to 7pm Monday-Thursday & 6pm to 9pm Fridays & Saturdays. Half off margaritas & $2 off draft beer.</p>
+                <textarea  rows="4" cols="50" name="comment" form="usrform"></textarea>
             </div>
-            {{!-- End of bar name input box --}}
-
-            <div class="form-group">
-                <label for="comment">Spill the tea. How's the new happy hour?</label>
-                <textarea class="form-control" rows="5" id="comment"></textarea>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
-        </div>
-
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Add</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
     </div>
-
-</div>
 </div>

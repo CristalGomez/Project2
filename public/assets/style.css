@@ -36,6 +36,11 @@ h2 {
     font-family: 'Pompiere', cursive;
     text-align: center;
 }
+
+#forumTitle {
+    margin: 20px;
+    padding: 10px;
+}
 body{
     margin: auto
 }
