@@ -1,6 +1,6 @@
 <h2 id="barsTitle">{{city}}Bars</h2>
 
-<div class="container">
+<div id="bars-container" class="container">
     <div class="row">
         <div align="middle" class="col-md-12">
             {{bar_name}} {{bar_image}}
@@ -16,7 +16,8 @@
 
 <div class="footer">
     <div class="container text-center">
-        <p>Home | Github | Contact Us</p>
+        <p>Home | <a href="https://github.com/CristalGomez/Project2"
+                target="blank">Github</a> | Contact Us</p>
     </div>
 </div>
 
@@ -34,7 +35,7 @@
             </div>
             <div align="left" class="modal-body">
                 {{!-- Bar name input box --}}
-                <div class="form-group">
+                <div id="barForm" class="form-group">
                     <label for="usr">Bar Name:</label>
                     <input type="text" class="form-control" id="usr">
                 </div>
@@ -43,12 +44,12 @@
                 {{!-- Image input form --}}
                 <form action="/action_page.php">
                     <p>Bar Image:</p>
-                    <input type="file" name="pic" accept="image/*">
+                    <input id="barImg" type="file" name="pic" accept="image/*">
                 </form>
                 {{!-- End of image input box --}}
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Add</button>
+                <button type="submit" id="addBars" class="btn btn-primary">Add</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>

@@ -98,17 +98,6 @@ var handleDeleteBtnClick = function () {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-
-
-//   $('#myModal').modal({ show: true })
-// })
-// $('#myModal').on('shown.bs.modal', function () {
-
-// $(document).on("click","#openModal", function(){
-//   console.log("hi")
-//   $("#myModal").modal({show: true})
-
-
 var hoverBtn1 = document.getElementById("card1");
 var hoverBtn2 = document.getElementById("card2");
 var hoverBtn3 = document.getElementById("card3");
@@ -135,3 +124,35 @@ hoverBtn3.onmouseout = function(){
   body.className = ""
 }
 
+//capturing the information from the add modal in the bars page
+
+var barCity = window.location.city;
+var barName = $("#usr");
+var barImg = $("#barImg");
+var barForm = $("#barForm");
+
+console.log(barForm)
+$(barForm).on("submit", function postBar(evnet){
+  event.preventDefault();
+
+  if (!barName.val().trim() || !barImg.val().trim()){
+    return;
+  }
+
+  var newBar = {
+    city: barCity.val().trim(),
+    name: barName.val().trim(),
+    img: barImg.val().trim()
+  };
+  console.log(newBar);
+
+  submitBar(newBar)
+});
+
+function submitBar(Post){
+  $.post("/api/bars/", Post, function(){
+    window.location.href = "/bars"
+  })
+}
+
+//capturing the information from the update modal in the forum page

@@ -31,6 +31,8 @@ h1{
 
 #instructions {
     text-align: center;
+    background-color: lightgray;
+    padding: 10px;
 }
 
 #barsTitle {

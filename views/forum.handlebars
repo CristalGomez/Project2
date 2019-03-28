@@ -1,11 +1,11 @@
 <h2 id="forumTitle">{{bar_name}} Happy Hour Forum</h2>
 
 {{!-- Header/ instructions on how this website works --}}
-<div class="container">
+<div id="instructions" class="container">
     <div class="row">
         <div align="middle" class="col-md-12">
             <p align="middle">How it works:</p>
-            <p id="instructions">Top comment (comment with the most <i class="fas fa-thumbs-up"></i>) can be interpreted
+            <p>Top comment (comment with the most <i class="fas fa-thumbs-up"></i>) can be interpreted
                 as the most current
                 special. As the comment recieves more <i class="fas fa-thumbs-down"></i>, it will be bumped down on the
                 list and you can assume
@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="container">
+<div id="forum-container" class="container">
     <div class="row">
         <div class="col-md-12">
             {{forum}}
@@ -51,7 +51,7 @@
                 <textarea  rows="4" cols="50" name="comment" form="usrform"></textarea>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Update</button>
+                <button type="button" id="updateForum" class="btn btn-primary">Update</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
