@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
@@ -97,6 +98,16 @@ var handleDeleteBtnClick = function () {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+=======
+//   $('#myModal').modal({ show: true })
+// })
+// $('#myModal').on('shown.bs.modal', function () {
+
+// $(document).on("click","#openModal", function(){
+//   console.log("hi")
+//   $("#myModal").modal({show: true})
+
+>>>>>>> bb2004f5d927113c2df25602c1b3fe66b542edc4
 
 var hoverBtn1 = document.getElementById("card1");
 var hoverBtn2 = document.getElementById("card2");
