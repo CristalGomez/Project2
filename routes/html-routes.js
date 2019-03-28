@@ -6,48 +6,36 @@
 // =============================================================
 var path = require("path");
 var express = require("express")
+var db = require("../models");
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  app.get("/", function(req, res){
+  app.get("/", function (req, res) {
     res.render("index");
   })
 
-  app.get("/bars", function(req, res){
-    res.render("city")
-  })
-
-  app.get("/bars/:city", function(req, res){
-    res.render("city", {
-      city:req.params.city
+  app.get("/bars/:city", function (req, res) {
+    db.bar.findAll({
+      where: {
+        city: req.params.city
+      },
+      // order: ["id", "DESC"]
+    }).then(function (data) {      
+      res.render("city", {
+        city: req.params.city,
+        bars: data
+      })
     })
   });
 
-  app.get("/forum", function(req, res){
-    res.render("forum")
+  app.get("/bars", function (req, res) {
+    res.render("city")
   });
 
-  // index route loads view.html
-  // app.get("/", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
-  // cms route loads cms.html
-  // app.get("/cms", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
-  // // blog route loads blog.html
-  // app.get("/bars", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
-  // // authors route loads author-manager.html
-  // app.get("/cities", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
+  app.get("/forum", function (req, res) {
+    res.render("forum")
+  });
 };
