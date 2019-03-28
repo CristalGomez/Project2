@@ -6,6 +6,7 @@
 // =============================================================
 var path = require("path");
 var express = require("express")
+var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function (app) {
@@ -17,11 +18,19 @@ module.exports = function (app) {
   })
 
   app.get("/bars/:city", function (req, res) {
-    res.render("city", {
-      city: req.params.city
+    db.bar.findAll({
+      where: {
+        city: req.params.city
+      },
+      // order: ["id", "DESC"]
+    }).then(function (data) {      
+      res.render("city", {
+        city: req.params.city,
+        bars: data
+      })
     })
   });
-  
+
   app.get("/bars", function (req, res) {
     res.render("city")
   });
@@ -29,25 +38,4 @@ module.exports = function (app) {
   app.get("/forum", function (req, res) {
     res.render("forum")
   });
-
-  // index route loads view.html
-  // app.get("/", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
-  // cms route loads cms.html
-  // app.get("/cms", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
-  // // blog route loads blog.html
-  // app.get("/bars", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
-  // // authors route loads author-manager.html
-  // app.get("/cities", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/"));
-  // });
-
 };
