@@ -41,14 +41,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="forumModalLabel">{{Bar_name}} Happy Hour Update</h5>
+                <h5 id="barNameForum" class="modal-title" id="forumModalLabel">{{Bar_name}} Happy Hour Update</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div align="middle" class="modal-body">
                 <p>Example: The new happy hour is now from 4pm to 7pm Monday-Thursday & 6pm to 9pm Fridays & Saturdays. Half off margaritas & $2 off draft beer.</p>
-                <textarea  rows="4" cols="50" name="comment" form="usrform"></textarea>
+                <textarea id="forumInput" rows="4" cols="50" name="comment" form="usrform"></textarea>
             </div>
             <div class="modal-footer">
                 <button type="button" id="updateForum" class="btn btn-primary">Update</button>

@@ -35,9 +35,9 @@
             </div>
             <div align="left" class="modal-body">
                 {{!-- Bar name input box --}}
-                <div id="barForm" class="form-group">
+                <div data-city={{city}} id="barForm" class="form-group">
                     <label for="usr">Bar Name:</label>
-                    <input type="text" class="form-control" id="usr">
+                    <input type="text" class="form-control" id="barName">
                 </div>
                 {{!-- End of bar name input box --}}
 
@@ -49,7 +49,7 @@
                 {{!-- End of image input box --}}
             </div>
             <div class="modal-footer">
-                <button type="submit" id="addBars" class="btn btn-primary">Add</button>
+                <button type="button" id="addBars" class="btn btn-primary">Add</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>

@@ -19,12 +19,8 @@
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "path": "^0.12.7",
-<<<<<<< HEAD
-    "sequelize": "^4.38.0"
-=======
     "sequelize": "^4.38.0",
     "sequelize-cli": "^5.4.0"
->>>>>>> bb2004f5d927113c2df25602c1b3fe66b542edc4
   },
   "devDependencies": {
     "chai": "^4.1.2",
