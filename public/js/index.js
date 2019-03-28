@@ -107,26 +107,26 @@ $(document).ready(function () {
   var hoverBtn3 = document.getElementById("card3");
   var body = document.body;
 
-  // hoverBtn1.onmouseover = function(){
-  //   body.className = "austin";
-  // }
+  hoverBtn1.onmouseover = function(){
+    body.className = "austin";
+  }
 
-  // hoverBtn2.onmouseover = function(){
-  //   body.className = "houston";
-  // }
+  hoverBtn2.onmouseover = function(){
+    body.className = "houston";
+  }
 
-  // hoverBtn3.onmouseover = function(){
-  //   body.className = "dallas";
-  // }
-  // hoverBtn1.onmouseout = function(){
-  //   body.className = ""
-  // }
-  // hoverBtn2.onmouseout = function(){
-  //   body.className = ""
-  // }
-  // hoverBtn3.onmouseout = function(){
-  //   body.className = ""
-  // }
+  hoverBtn3.onmouseover = function(){
+    body.className = "dallas";
+  }
+  hoverBtn1.onmouseout = function(){
+    body.className = ""
+  }
+  hoverBtn2.onmouseout = function(){
+    body.className = ""
+  }
+  hoverBtn3.onmouseout = function(){
+    body.className = ""
+  }
 
   //capturing the information from the add modal in the bars page
 
