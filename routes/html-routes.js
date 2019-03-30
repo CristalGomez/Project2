@@ -18,12 +18,23 @@ module.exports = function (app) {
   })
   app.get("/bars/:city", function (req, res) {
     db.bar.findAll({
-
+      where: {
+        city: req.params.city
+      },
+      // order: ["id", "DESC"]
     }).then(function (data) {
-      console.log(data[0])
+      for (i=0; i < data.length; i++){
+      console.log(data[i].dataValues);  
+      }
+     const barArr = data.map(bar => {
+        return {
+          title: bar.title,
+          image: bar.image
+        }
+      })
       res.render("city", {
         city: req.params.city,
-        bars: data
+        bars: barArr
       })
     })
   })
