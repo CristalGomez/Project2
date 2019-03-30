@@ -42,7 +42,7 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/bars", function(req, res) {
     console.log(req.body);
-    db.Post.create({
+    db.bar.create({
       title: req.body.title,
       body: req.body.body,
       image: req.body.image,
