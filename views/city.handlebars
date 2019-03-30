@@ -2,31 +2,30 @@
 
 <div id="bars-container" class="container">
     <div class="row">
-        <div class="col-md-12 barsCard">
+        <div class="col-md-12">
             <ul class="people_list">
+
                 {{#each bars}}
-                <img id="barImg" width="200px";height="220px" src={{this.image}} />
-                <br>
-                <br>
-                <button id="barID">{{this.title}}{{this.barId}}</button>
+                <div class="cityClass card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">{{this.title}}</div>
+                    <div class="card-body">
+                        <img width="200px" ;height="220px" src={{this.image}} />
+                    </div>
+                </div>
+
                 {{/each}}
             </ul>
         </div>
     </div>
 
-    <div class="row">
-        <div align="middle" class="col-md-12">
-            <p>Don't see your bar? <button type="button" class="btn btn-primary btn-dark" data-toggle="modal"
-                    data-target="#barsModal">
-                    Add It
-                </button></p>
-        </div>
-    </div>
 </div>
 
 
-
 <div class="footer">
+    <p>Don't see your bar? <button type="button" class="btn btn-primary btn-dark" data-toggle="modal"
+            data-target="#barsModal">
+            Add It
+        </button></p>
     <div class="container text-center">
         <a href="/">Home</a> | <a href="https://github.com/CristalGomez/Project2">Github</a> | <a
             href="/contactUs">Contact Us</a>
