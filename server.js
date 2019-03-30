@@ -26,7 +26,7 @@ app.set("view engine", "handlebars");
 app.set('views', __dirname + '/views');
 
 // Routes
-require("./routes/bars-routes")(app);
+// require("./routes/bars-routes")(app);
 require("./routes/html-routes")(app);
 
 var syncOptions = { force: false };
