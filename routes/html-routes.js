@@ -23,13 +23,15 @@ module.exports = function (app) {
       },
       // order: ["id", "DESC"]
     }).then(function (data) {
-      for (i=0; i < data.length; i++){
-      console.log(data[i].dataValues);  
-      }
+      // for (i=0; i < data.length; i++){
+      // console.log(data[i].dataValues);  
+      // }
      const barArr = data.map(bar => {
         return {
+          id: bar.id,
           title: bar.title,
-          image: bar.image
+          image: bar.image,
+          city: bar.city
         }
       })
       res.render("city", {
@@ -44,7 +46,7 @@ module.exports = function (app) {
     res.render("city")
   });
 
-  app.get("/forum", function (req, res) {
+  app.get("/forum/:city/:title", function (req, res) {
     res.render("forum")
 
   });
