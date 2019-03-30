@@ -22,7 +22,13 @@
 <div id="forum-container" class="container">
     <div class="row">
         <div class="col-md-12">
-            {{forum}}
+            <ul>
+                {{#each posts}}
+                    <div class="card-body">
+                        <p>{{this.body}}</p>
+                    </div>
+                {{/each}}
+            </ul>
         </div>
     </div>
 </div>
@@ -47,7 +53,8 @@
                 </button>
             </div>
             <div align="middle" class="modal-body">
-                <p>Example: The new happy hour is now from 4pm to 7pm Monday-Thursday & 6pm to 9pm Fridays & Saturdays. Half off margaritas & $2 off draft beer.</p>
+                <p>Example: The new happy hour is now from 4pm to 7pm Monday-Thursday & 6pm to 9pm Fridays & Saturdays.
+                    Half off margaritas & $2 off draft beer.</p>
                 <textarea id="forumInput" rows="4" cols="50" name="comment" form="usrform"></textarea>
                 <input type="hidden" id="barId" value={{barId}}>
             </div>
