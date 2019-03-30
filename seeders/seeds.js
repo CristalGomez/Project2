@@ -10,7 +10,6 @@ module.exports = {
       updatedAt: new Date()
     }], {});
   },
-
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('bars', null, {});
   }
