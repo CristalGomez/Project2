@@ -21,7 +21,10 @@ module.exports = function (sequelize, DataTypes) {
     });
     Bars.associate = function (models) {
         Bars.hasMany(models.post, {
-            onDelete: "CASCADE"
+            onDelete: "CASCADE",
+            foreignKey: {
+                allowNull: false                
+            }
         })
     }
     return Bars;
