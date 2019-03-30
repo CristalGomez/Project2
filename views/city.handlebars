@@ -16,8 +16,9 @@
 
 <div class="footer">
     <div class="container text-center">
-        <a href="/">Home</a> | <a href="https://github.com/CristalGomez/Project2">Github</a> | <a href="/contactUs">Contact Us</a>
-        
+        <a href="/">Home</a> | <a href="https://github.com/CristalGomez/Project2">Github</a> | <a
+            href="/contactUs">Contact Us</a>
+
     </div>
 </div>
 
@@ -42,18 +43,21 @@
                 {{!-- End of bar name input box --}}
 
                 {{!-- Image input form --}}
+                <label for="usr">Bar Image:</label>
+                <input type="url" class="form-control" id="barImg">
+
+
+{{!-- 
                 <form action="/action_page.php">
                     <p>Bar Image:</p>
                     <input id="barImg" type="file" name="pic" accept="image/*">
-                </form>
+                </form> --}}
                 {{!-- End of image input box --}}
             </div>
             <div class="modal-footer">
-                <button type="button" id="addBars" class="btn btn-primary">Add</button>
+                <button type="button" id="addBars" data-dismiss="modal" class="btn btn-primary">Add</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
-
-
