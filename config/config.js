@@ -1,8 +1,8 @@
-
-{
+require('dotenv').config();
+module.exports = {
   "development": {
     "username": "root",
-    "password": "Purple347841",
+    "password": process.env.db_key,
     "database": "bars_db",
     "host": "localhost",
     "dialect": "mysql"
