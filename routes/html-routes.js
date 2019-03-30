@@ -43,7 +43,7 @@ module.exports = function (app) {
     })
   })
 
-  app.post("/api/bars", function(req, res) {
+  app.post("/bars", function(req, res) {
     db.bar.create({
       title: req.body.title,
       image: req.body.image,
@@ -54,7 +54,7 @@ module.exports = function (app) {
       });
   });
 
-  app.post("/api/forum/:barId", function(req, res) {
+  app.post("/forum/:barId", function(req, res) {
     db.post.create({
       body: req.body.body,
       barId: req.params.barId
@@ -63,11 +63,7 @@ module.exports = function (app) {
         res.json(dbPost);
       });
   });
-  app.get('/')
 
-  app.get("/api/bars", function (req, res) {
-    res.json("city")
-  });
 
   app.get("/forum/:barId", function (req, res) {
     res.render("forum",{barId: req.params.barId})

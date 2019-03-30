@@ -57,7 +57,7 @@ $(document).ready(function () {
  
 
   function submitBar(Bars) {
-    $.post("/api/bars/", Bars, function () {
+    $.post("/bars/", Bars, function () {
 
       window.location.reload()
     })
@@ -86,7 +86,7 @@ $(document).ready(function () {
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
-    jQuery.post("/api/forum/"+ Post.barId, Post, function () {
+    jQuery.post("/forum/"+ Post.barId, Post, function () {
       window.location.reload();
     })
   }
