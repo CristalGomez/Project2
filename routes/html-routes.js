@@ -16,22 +16,18 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("index");
   })
-
   app.get("/bars/:city", function (req, res) {
     db.bar.findAll({
-      where: {
-        city: req.params.city
-      },
-      // order: ["id", "DESC"]
+
     }).then(function (data) {
-      console.log(data[0].dataValues)
-      console.log(data[0].dataValues.id)     
+      console.log(data[0])
       res.render("city", {
         city: req.params.city,
         bars: data
       })
     })
-  });
+  })
+
 
   app.get("/bars", function (req, res) {
     res.render("city")

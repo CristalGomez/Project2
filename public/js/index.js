@@ -163,7 +163,7 @@ $(document).ready(function () {
     })
   }
 
-  $("#updateForum").on("click", function(event){
+  $("#updateForum").on("click", function (event) {
     event.preventDefault()
     // var forum = $("#forumModal");
     var forumInput = $("#forumInput")[0].value;
@@ -176,15 +176,17 @@ $(document).ready(function () {
       // foreignKey: barId
     };
 
+ 
+
     console.log(newForum);
 
     postForum(newForum);
   });
 
   //capturing the information from the update modal in the forum page
-    function postForum(Post){
-      jQuery.post("/api/forum/:barId", Post, function(){
-        window.location.href = "/forum"
-      })
-    }
+  function postForum(Post) {
+    jQuery.post("/api/forum/:barId", Post, function () {
+      window.location.href = "/forum"
+    })
+  }
 });
