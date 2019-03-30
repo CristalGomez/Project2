@@ -9,11 +9,10 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
     Post.associate = function (models) {
-        Post.belongsTo(models.bar, {
+        Post.belongsTo(models.bar, {            
+            onDelete: "CASCADE",
             foreignKey: {
-                allowNull: false,
-                defaultValue: 1
-                
+                allowNull: false                
             }
         })
     }
