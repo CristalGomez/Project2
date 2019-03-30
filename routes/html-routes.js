@@ -23,7 +23,10 @@ module.exports = function (app) {
         city: req.params.city
       },
       // order: ["id", "DESC"]
-    }).then(function (data) {      
+    }).then(function (data) {
+      for (i=0; i < data.length; i++){
+      console.log(data[i].dataValues);  
+      }
       res.render("city", {
         city: req.params.city,
         bars: data
