@@ -61,11 +61,7 @@ module.exports = function (app) {
         res.json(dbPost);
       });
   });
-  app.get('/')
 
-  app.get("/api/bars", function (req, res) {
-    res.json("city")
-  });
 
   app.get("/forum/:barId", function (req, res) {
     db.post.findAll({
