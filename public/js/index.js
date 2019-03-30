@@ -161,7 +161,7 @@ $(document).ready(function () {
   function submitBar(Bars) {
     $.post("/api/bars/", Bars, function () {
 
-      window.location.href = "/bars"
+      window.location.href = "/"
     })
   }
 
