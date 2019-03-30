@@ -131,24 +131,27 @@ $(document).ready(function () {
   //capturing the information from the add modal in the bars page
 
   
-  // var barImg = $("#barImg").val();
+
   
   $('#addBars').on("click", function (event) {
     event.preventDefault();
     var barForm = $("#barForm");
+    var barImg = $("#barImg");
     console.log(barForm)
     var barCity = barForm.data('city');
     var barName = $("#barName")[0].value;
-    event.preventDefault();
+    var barImg = $("#barImg")[0].value;
+
     console.log(barCity, barName)
+    console.log(barImg)
     console.log($("#barName")[0].value)
 
 
 
     var newBar = {
       city: barCity,
-      name: barName,
-      // img: barImg
+      title: barName,
+      image: barImg
     };
     console.log(newBar);
 
@@ -156,16 +159,14 @@ $(document).ready(function () {
   });
 
   function submitBar(Bars) {
-    
-    $.post("/api/bars", Bars, function () {
-      console.log("hello");
+    $.post("/api/bars/", Bars, function () {
+
       window.location.href = "/bars"
     })
   }
 
   $("#updateForum").on("click", function(event){
-    event.preventDefault();
-
+    event.preventDefault()
     var forum = $("#forumModal");
     var forumInput = ("#forumInput");
     var barForum = ("#barNameForum");
