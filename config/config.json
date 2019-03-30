@@ -2,7 +2,7 @@
 {
   "development": {
     "username": "root",
-    "password": "db_key",
+    "password": "Purple347841",
     "database": "bars_db",
     "host": "localhost",
     "dialect": "mysql"

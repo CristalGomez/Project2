@@ -130,9 +130,6 @@ $(document).ready(function () {
 
   //capturing the information from the add modal in the bars page
 
-  
-
-  
   $('#addBars').on("click", function (event) {
     event.preventDefault();
     var barForm = $("#barForm");
@@ -155,15 +152,15 @@ $(document).ready(function () {
     };
     console.log(newBar);
 
-    submitBar(newBar)
+    // submitBar(newBar)
   });
 
-  function submitBar(Bars) {
-    $.post("/api/bars/", Bars, function () {
+  // function submitBar(Bars) {
+  //   $.post("/api/bars/", Bars, function () {
 
-      window.location.href = "/bars"
-    })
-  }
+  //     window.location.href = "/bars"
+  //   })
+  // }
 
   $("#updateForum").on("click", function(event){
     event.preventDefault()
@@ -181,10 +178,6 @@ $(document).ready(function () {
     postForum(newForum);
   });
 
-  
-  
-  
-  
   //capturing the information from the update modal in the forum page
     function postForum(Post){
       jQuery.post("/api/forum/", Post, function(){
