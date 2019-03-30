@@ -152,25 +152,28 @@ $(document).ready(function () {
     };
     console.log(newBar);
 
-    // submitBar(newBar)
+    submitBar(newBar)
   });
 
-  // function submitBar(Bars) {
-  //   $.post("/api/bars/", Bars, function () {
+  function submitBar(Bars) {
+    $.post("/api/bars/", Bars, function () {
 
-  //     window.location.href = "/bars"
-  //   })
-  // }
+      window.location.href = "/"
+
+    })
+  }
 
   $("#updateForum").on("click", function(event){
     event.preventDefault()
-    var forum = $("#forumModal");
-    var forumInput = ("#forumInput");
-    var barForum = ("#barNameForum");
+    // var forum = $("#forumModal");
+    var forumInput = $("#forumInput")[0].value;
+    console.log(forumInput)
+    // var barForum = ("#barNameForum");
+
 
     var newForum = {
-      city: barForum,
-      input: forumInput
+      input: forumInput,
+      // foreignKey: barId
     };
 
     console.log(newForum);
@@ -180,7 +183,7 @@ $(document).ready(function () {
 
   //capturing the information from the update modal in the forum page
     function postForum(Post){
-      jQuery.post("/api/forum/", Post, function(){
+      jQuery.post("/api/forum/:barId", Post, function(){
         window.location.href = "/forum"
       })
     }

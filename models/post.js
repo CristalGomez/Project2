@@ -11,9 +11,11 @@ module.exports = function (sequelize, DataTypes) {
     Post.associate = function (models) {
         Post.belongsTo(models.bar, {
             foreignKey: {
-                allowNull: false
+                allowNull: false,
+                defaultValue: 1
             }
         })
     }
+
     return Post;
 };

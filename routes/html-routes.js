@@ -23,7 +23,9 @@ module.exports = function (app) {
         city: req.params.city
       },
       // order: ["id", "DESC"]
-    }).then(function (data) {      
+    }).then(function (data) {
+      console.log(data[0].dataValues)
+      console.log(data[0].dataValues.id)     
       res.render("city", {
         city: req.params.city,
         bars: data
@@ -37,5 +39,6 @@ module.exports = function (app) {
 
   app.get("/forum", function (req, res) {
     res.render("forum")
+
   });
 };
