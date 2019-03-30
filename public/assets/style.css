@@ -137,3 +137,10 @@ body{
   animation-name: bounce;
   -moz-animation-name: bounce;
 }
+
+.cityClass {
+   padding: 0% !important;
+   width: auto !important;
+   height: auto !important; 
+    
+}

@@ -13,8 +13,15 @@
     </div>
 </div>
 <ul class="people_list">
+
   {{#each bars}}
+  <div class="cityClass card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">{{this.title}}</div>
+    <div class="card-body">
     <img src={{this.image}}/>
+    </div>
+  </div>
+    
   {{/each}}
 </ul>
 
