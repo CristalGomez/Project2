@@ -153,6 +153,8 @@ $(document).ready(function () {
     console.log(newBar);
 
     submitBar(newBar)
+
+
   });
 
   function submitBar(Bars) {
