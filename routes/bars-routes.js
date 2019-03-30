@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   // Get route for returning posts of a specific city
   app.get("/api/bars/:city", function(req, res) {
-    db.Post.findAll({
+    db.bar.findAll({
       where: {
         city: req.params.city
       },
@@ -50,6 +50,7 @@ module.exports = function(app) {
         res.json(dbPost);
       });
   });
+  app.get('/')
 
 
 

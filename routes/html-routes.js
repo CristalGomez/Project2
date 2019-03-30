@@ -16,7 +16,6 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("index");
   })
-
   app.get("/bars/:city", function (req, res) {
     db.bar.findAll({
       where: {
@@ -27,12 +26,19 @@ module.exports = function (app) {
       for (i=0; i < data.length; i++){
       console.log(data[i].dataValues);  
       }
+     const barArr = data.map(bar => {
+        return {
+          title: bar.title,
+          image: bar.image
+        }
+      })
       res.render("city", {
         city: req.params.city,
-        bars: data
+        bars: barArr
       })
     })
-  });
+  })
+
 
   app.get("/bars", function (req, res) {
     res.render("city")
@@ -40,5 +46,6 @@ module.exports = function (app) {
 
   app.get("/forum", function (req, res) {
     res.render("forum")
+
   });
 };

@@ -130,9 +130,6 @@ $(document).ready(function () {
 
   //capturing the information from the add modal in the bars page
 
-  
-
-  
   $('#addBars').on("click", function (event) {
     event.preventDefault();
     var barForm = $("#barForm");
@@ -161,34 +158,34 @@ $(document).ready(function () {
   function submitBar(Bars) {
     $.post("/api/bars/", Bars, function () {
 
-      window.location.href = "/"
+      window.location.reload()
     })
   }
 
-  $("#updateForum").on("click", function(event){
+  $("#updateForum").on("click", function (event) {
     event.preventDefault()
-    var forum = $("#forumModal");
-    var forumInput = ("#forumInput");
-    var barForum = ("#barNameForum");
+    // var forum = $("#forumModal");
+    var forumInput = $("#forumInput")[0].value;
+    console.log(forumInput)
+    // var barForum = ("#barNameForum");
+
 
     var newForum = {
-      city: barForum,
-      input: forumInput
+      input: forumInput,
+      // foreignKey: barId
     };
+
+ 
 
     console.log(newForum);
 
     postForum(newForum);
   });
 
-  
-  
-  
-  
   //capturing the information from the update modal in the forum page
-    function postForum(Post){
-      jQuery.post("/api/forum/", Post, function(){
-        window.location.href = "/forum"
-      })
-    }
+  function postForum(Post) {
+    jQuery.post("/api/forum/:barId", Post, function () {
+      window.location.href = "/forum"
+    })
+  }
 });
