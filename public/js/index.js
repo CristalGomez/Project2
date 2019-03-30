@@ -156,7 +156,9 @@ $(document).ready(function () {
   });
 
   function submitBar(Bars) {
-    $.post("/api/bars/", Bars, function () {
+    
+    $.post("/api/bars", Bars, function () {
+      console.log("hello");
       window.location.href = "/bars"
     })
   }
