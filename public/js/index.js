@@ -186,7 +186,7 @@ $(document).ready(function () {
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
-    jQuery.post("/api/forum/:barId", Post, function () {
+    jQuery.post("/api/forum/" + barId, Post, function () {
       window.location.href = "/forum"
     })
   }
