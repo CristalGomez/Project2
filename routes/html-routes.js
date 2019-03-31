@@ -66,13 +66,15 @@ module.exports = function (app) {
   app.get("/forum/:barId", function (req, res) {
     db.post.findAll({
       where: {
-        barId: req.params.barId
+        barId: req.params.barId,
+        // body: req.params.body,
+        // time: req.params.createdAt
       },
       //order: ["id"]
     }).then(function (data) {
       const postArr = data.map(post => {
         return {
-          body: post.body
+          body: post.body,
         }
       })
       res.render("forum", {

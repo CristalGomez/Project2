@@ -1,19 +1,6 @@
 <h2 id="barsTitle">{{city}} Bars</h2>
 
 <div id="bars-container" class="container">
-    <div class="row">
-        <div align="middle" class="col-md-12">
-            {{bar_name}} {{bar_image}}
-
-            <p>Don't see your bar? <button type="button" class="btn btn-primary btn-dark" data-toggle="modal"
-                    data-target="#barsModal">
-                    Add It
-                </button></p>
-        </div>
-    </div>
-</div>
-<ul>
-
   {{#each bars}}
   <a href="/forum/{{this.id}}" class="cityClass card text-white bg-primary mb-3" style="max-width: 18rem;">
     <div class="card-header">{{this.title}}</div>
@@ -27,6 +14,10 @@
 
 
 <div class="footer">
+    <p>Don't see your bar? <button type="button" class="btn btn-primary btn-dark" data-toggle="modal"
+            data-target="#barsModal">
+            Add It
+        </button></p>
     <div class="container text-center">
         <a href="/">Home</a> | <a href="https://github.com/CristalGomez/Project2">Github</a> | <a
             href="/contactUs">Contact Us</a>
@@ -59,7 +50,7 @@
                 <input type="url" class="form-control" id="barImg">
 
 
-{{!-- 
+                {{!-- 
                 <form action="/action_page.php">
                     <p>Bar Image:</p>
                     <input id="barImg" type="file" name="pic" accept="image/*">
