@@ -23,10 +23,10 @@ module.exports = function (app) {
       },
       order: ["id"]
     }).then(function (data) {
-      for (i=0; i < data.length; i++){
-      console.log(data[i].dataValues);  
+      for (i = 0; i < data.length; i++) {
+        console.log(data[i].dataValues);
       }
-     const barArr = data.map(bar => {
+      const barArr = data.map(bar => {
         return {
           id: bar.id,
           title: bar.title,
@@ -34,39 +34,50 @@ module.exports = function (app) {
           city: bar.city
         }
       })
-      res.render("city"
-      ,{
+      res.render("city", {
         city: req.params.city,
         bars: barArr
-      }
-      )
+      })
     })
   })
 
-  app.post("/bars", function(req, res) {
+  app.post("/api/bars", function (req, res) {
     db.bar.create({
-      title: req.body.title,
-      image: req.body.image,
-      city: req.body.city
-    })
-      .then(function(dbPost) {
+        title: req.body.title,
+        image: req.body.image,
+        city: req.body.city
+      })
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
 
-  app.post("/forum/:barId", function(req, res) {
+  app.post("/api/forum/:barId", function (req, res) {
     db.post.create({
-      body: req.body.body,
-      barId: req.params.barId
-    })
-      .then(function(dbPost) {
+        body: req.body.body,
+        barId: req.params.barId
+      })
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
 
 
   app.get("/forum/:barId", function (req, res) {
-    res.render("forum",{barId: req.params.barId})
-
+    db.post.findAll({
+      where: {
+        barId: req.params.barId
+      },
+      //order: ["id"]
+    }).then(function (data) {
+      const postArr = data.map(post => {
+        return {
+          body: post.body
+        }
+      })
+      res.render("forum", {
+        posts: postArr
+      })
+    })
   });
 };
