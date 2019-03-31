@@ -3,11 +3,19 @@ body {
     margin: 0;
     opacity: 30%;
     background-size: cover;
-    background: url(../assets//images/bg.jpg);
+    height: 100%;
+
+    background: url("../assets//images/bgcopy1.jpg");
+
+
 }
 
-
-body.austin {
+.forum-container {
+    background-color: lightgray;
+    margin: 10px;
+    padding: 10px;
+}
+/* body.austin {
     background-size: cover;
     background: url(../assets/images/austin.jpg);
 }
@@ -22,7 +30,7 @@ body.austin {
     background-size: cover;
 
     background: url(../assets/images/dallas.jpg);
-}
+} */
 h1{
     font-family: 'Poiret One', cursive;
     text-align: center;
@@ -51,9 +59,8 @@ h2 {
     margin: 20px;
     padding: 10px;
 }
-body{
-    margin: auto
-}
+
+
 
 .city {
     display: flex;
@@ -143,5 +150,19 @@ img {
    padding: 0% !important;
    width: auto !important;
    height: auto !important; 
-    
+
+}
+
+.card-body {
+    background-color: lightgray;
+    border-color: black
+}
+
+.card-header{
+    background-color: lightgray;
+    border-color: black;
+}
+
+.footer {
+    margin-top: 5px;
 }
