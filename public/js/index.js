@@ -57,7 +57,7 @@ $(document).ready(function () {
  
 
   function submitBar(Bars) {
-    $.post("/bars/", Bars, function () {
+    $.post("/api/bars/", Bars, function () {
 
       window.location.reload()
     })
@@ -67,8 +67,9 @@ $(document).ready(function () {
     event.preventDefault()
     // var forum = $("#forumModal");
     var forumInput = $("#forumInput")[0].value;
-    var forumBarId = $("#barId")[0].value;
+    var forumBarId = $("#barId")[0];
     console.log(forumInput)
+    console.log(forumBarId)
     // var barForum = ("#barNameForum");
 
 
@@ -76,17 +77,13 @@ $(document).ready(function () {
       body: forumInput,
       barId:forumBarId
     };
-
- 
-
     console.log(newForum);
-
     postForum(newForum);
   });
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
-    jQuery.post("/forum/"+ Post.barId, Post, function () {
+    $.post("/forum/"+ Post.barId, Post, function () {
       window.location.reload();
     })
   }
