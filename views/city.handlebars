@@ -1,22 +1,7 @@
 <h2 id="barsTitle">{{city}} Bars</h2>
 
 <div id="bars-container" class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="people_list">
 
-                {{#each bars}}
-                <div class="cityClass card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">{{this.title}}</div>
-                    <div class="card-body">
-                        <img width="200px" ;height="220px" src={{this.image}} />
-                    </div>
-                </div>
-
-                {{/each}}
-            </ul>
-        </div>
-    </div>
 
   {{#each bars}}
   <a href="/forum/{{this.city}}/{{this.id}}" class="cityClass card text-white bg-primary mb-3" style="max-width: 18rem;">

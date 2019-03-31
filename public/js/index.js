@@ -187,7 +187,7 @@ $(document).ready(function () {
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
     jQuery.post("/api/forum/" + Post, function () {
-      window.location.href = "/forum"
+      window.location.reload();
     })
   }
 });
