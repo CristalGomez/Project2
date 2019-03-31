@@ -10,7 +10,11 @@ body {
 
 }
 
-
+.forum-container {
+    background-color: lightgray;
+    margin: 10px;
+    padding: 10px;
+}
 /* body.austin {
     background-size: cover;
     background: url(../assets/images/austin.jpg);
