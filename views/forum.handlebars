@@ -24,15 +24,11 @@
 <div id="forum-container" class="container">
     <div class="row">
         <div class="col-md-12">
-            <ul class="people_list">
-
+            <ul>
                 {{#each posts}}
-                <div class="forumClass card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="forum-body">
-                        <p>{{this.body}}</p>>
-                        <p align="right">{{this.createdAt}}</p>
+                    <div class="card-body">
+                        <p>{{this.body}}</p>
                     </div>
-                </div>
                 {{/each}}
             </ul>
         </div>
@@ -42,7 +38,7 @@
 
 <div class="footer">
     <div class="container text-center">
-        <p><a target="blank" href="/api/bars">API</a> | <a href="https://github.com/CristalGomez/Project2"
+        <p><a target="blank" href="/bars">API</a> | <a href="https://github.com/CristalGomez/Project2"
                 target="blank">Github</a> | <a href="/">Home</a> | <a href="/bars/contactUs">Contact Us</a>
     </div>
 </div>
@@ -62,6 +58,7 @@
                 <p>Example: The new happy hour is now from 4pm to 7pm Monday-Thursday & 6pm to 9pm Fridays & Saturdays.
                     Half off margaritas & $2 off draft beer.</p>
                 <textarea id="forumInput" rows="4" cols="50" name="comment" form="usrform"></textarea>
+                <input type="hidden" id="barId" value={{barId}}>
             </div>
             <div class="modal-footer">
                 <button type="button" id="updateForum" data-dismiss="modal" class="btn btn-primary">Update</button>
