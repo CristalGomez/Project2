@@ -69,7 +69,7 @@ $(document).ready(function () {
     event.preventDefault()
     // var forum = $("#forumModal");
     var forumInput = $("#forumInput")[0].value;
-    var forumBarId = $("#barId")[0];
+    var forumBarId = $("#barId")[0].value;
     console.log(forumInput)
     console.log(forumBarId)
     // var barForum = ("#barNameForum");
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
-    $.post("/forum/"+ Post.barId, Post, function () {
+    $.post("/forum/"+ Post.barId, Post.body, function () {
       window.location.reload();
     })
   }
