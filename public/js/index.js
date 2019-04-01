@@ -92,7 +92,7 @@ $(document).ready(function () {
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
-    $.post("/forum/"+ Post.barId, Post, function () {
+    $.post("/forum/"+ Post.barId, Post.body, function () {
       window.location.reload();
     })
   }

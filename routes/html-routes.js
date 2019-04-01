@@ -16,6 +16,7 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("index");
   })
+
   app.get("/bars/:city", function (req, res) {
     db.bar.findAll({
       where: {
@@ -69,14 +70,15 @@ module.exports = function (app) {
     db.post.findAll({
       where: {
         barId: req.params.barId,
-        // body: req.params.body,
-        // time: req.params.createdAt
+
       },
-      //order: ["id"]
+      order: ["id"]
     }).then(function (data) {
       const postArr = data.map(post => {
         return {
           body: post.body
+
+
         }
       })
       res.render("forum", {
