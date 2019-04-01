@@ -12,7 +12,7 @@ a:hover {
 }
 
 .forum-container {
-    background-color:rgb(102, 102, 102);
+    background-color:lightgray;
     margin: 10px;
     padding: 20px;
     width: 1140px;
@@ -41,7 +41,7 @@ h1{
 
 #instructions {
     text-align: center;
-    background-color:rgb(102, 102, 102);
+    background-color:lightgray;
     padding: 10px;
 }
 
@@ -87,7 +87,7 @@ img {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:rgb(102, 102, 102);
+    background-color:lightgray;
     color: black;
     text-align: center;
     padding: 10px;
@@ -129,7 +129,7 @@ img {
     float: left;
     width: 60%;
     height: 100px;
-    background-color: rgb(102, 102, 102);
+    background-color: lightgray;
      -webkit-animation-duration: 1s;
      animation-duration: 1s;
      -webkit-animation-fill-mode: both;
@@ -155,15 +155,16 @@ img {
 
 }
 
+
 .card-body {
-    background-color:rgb(102, 102, 102);
+    background-color:lightgray;
     border-color: black;
     margin-top: 1%;
     width: 1000px;
 }
 
 .card-header{
-    background-color:rgb(102, 102, 102);
+    background-color:lightgray;
     border-color: black;
 }
 
