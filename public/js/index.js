@@ -69,7 +69,7 @@ $(document).ready(function () {
     event.preventDefault()
     // var forum = $("#forumModal");
     var forumInput = $("#forumInput")[0].value;
-    var forumBarId = $("#barId")[0].value;
+    var forumBarId = $("#barId")[0];
     console.log(forumInput)
     console.log(forumBarId)
     // var barForum = ("#barNameForum");
