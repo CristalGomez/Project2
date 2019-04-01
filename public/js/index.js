@@ -1,31 +1,38 @@
 $(document).ready(function () {
 
 
-  // var hoverBtn1 = document.getElementById("card1");
-  // var hoverBtn2 = document.getElementById("card2");
-  // var hoverBtn3 = document.getElementById("card3");
-  // var body = document.body;
+  var hoverBtn1 = document.getElementById("card1");
+  var hoverBtn2 = document.getElementById("card2");
+  var hoverBtn3 = document.getElementById("card3");
+  var body = document.body;
 
-  // hoverBtn1.onmouseover = function(){
-  //   body.className = "austin";
-  // }
 
-  // hoverBtn2.onmouseover = function(){
-  //   body.className = "houston";
-  // }
+  $(document).on("mouseover", "#card1", function(){
+    body.className = "austin"
+  })
 
-  // hoverBtn3.onmouseover = function(){
-  //   body.className = "dallas";
-  // }
-  // hoverBtn1.onmouseout = function(){
-  //   body.className = ""
-  // }
-  // hoverBtn2.onmouseout = function(){
-  //   body.className = ""
-  // }
-  // hoverBtn3.onmouseout = function(){
-  //   body.className = ""
-  // }
+  $(document).on("mouseover", "#card2", function(){
+    body.className = "houston"
+  })
+
+  $(document).on("mouseover", "#card3", function(){
+    body.className = "dallas"
+  })
+
+
+  
+  $(document).on("mouseout", "", function(){
+    body.className = ""
+  })
+
+  $(document).on("mouseout", "", function(){
+    body.className = ""
+  })
+
+  $(document).on("mouseout", "", function(){
+    body.className = ""
+  })
+
 
   //capturing the information from the add modal in the bars page
  
@@ -57,7 +64,7 @@ $(document).ready(function () {
  
 
   function submitBar(Bars) {
-    $.post("/api/bars/", Bars, function () {
+    $.post("/bars/", Bars, function () {
 
       window.location.reload()
     })
@@ -82,7 +89,7 @@ $(document).ready(function () {
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
-    $.post("/api/forum/" + Post.barId, Post.body, function () {
+    $.post("/forum/"+ Post.barId, Post.body, function () {
       window.location.reload();
     })
   }

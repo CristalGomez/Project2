@@ -16,6 +16,7 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("index");
   })
+
   app.get("/bars/:city", function (req, res) {
     db.bar.findAll({
       where: {
@@ -41,7 +42,7 @@ module.exports = function (app) {
     })
   })
 
-  app.post("/api/bars", function (req, res) {
+  app.post("/bars", function (req, res) {
     db.bar.create({
         title: req.body.title,
         image: req.body.image,
@@ -52,7 +53,8 @@ module.exports = function (app) {
       });
   });
 
-  app.post("/api/forum/:barId", function (req, res) {
+  app.post("/forum/:barId", function (req, res) {
+    
     db.post.create({
         body: req.body.body,
         barId: req.params.barId
@@ -64,20 +66,23 @@ module.exports = function (app) {
 
 
   app.get("/forum/:barId", function (req, res) {
+    
     db.post.findAll({
       where: {
         barId: req.params.barId,
-        // body: req.params.body,
-        // time: req.params.createdAt
+
       },
-      //order: ["id"]
+      order: ["id"]
     }).then(function (data) {
       const postArr = data.map(post => {
         return {
-          body: post.body,
+          body: post.body
+
+
         }
       })
       res.render("forum", {
+        barId: req.params.barId,
         posts: postArr
       })
     })
