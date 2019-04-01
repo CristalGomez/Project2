@@ -34,6 +34,6 @@ heroku link
 ![update](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
 
 ## Creators
-Cristal Gomez
-Tyler Leach
-Zohaib Dhuka
+1. Cristal Gomez | [Github](https://github.com/CristalGomez)
+1. Tyler Leach |[Github](https://github.com/techman98)
+1. Zohaib Dhuka | [Github](https://github.com/zohaibdhukka)
