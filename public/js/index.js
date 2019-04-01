@@ -1,37 +1,37 @@
 $(document).ready(function () {
 
 
-  var hoverBtn1 = document.getElementById("card1");
-  var hoverBtn2 = document.getElementById("card2");
-  var hoverBtn3 = document.getElementById("card3");
-  var body = document.body;
+  // var hoverBtn1 = document.getElementById("card1");
+  // var hoverBtn2 = document.getElementById("card2");
+  // var hoverBtn3 = document.getElementById("card3");
+  // var body = document.body;
 
 
-  $(document).on("mouseover", "#card1", function(){
-    body.className = "austin"
-  })
+  // $(document).on("mouseover", "#card1", function(){
+  //   body.className = "austin"
+  // })
 
-  $(document).on("mouseover", "#card2", function(){
-    body.className = "houston"
-  })
+  // $(document).on("mouseover", "#card2", function(){
+  //   body.className = "houston"
+  // })
 
-  $(document).on("mouseover", "#card3", function(){
-    body.className = "dallas"
-  })
+  // $(document).on("mouseover", "#card3", function(){
+  //   body.className = "dallas"
+  // })
 
 
   
-  $(document).on("mouseout", "", function(){
-    body.className = ""
-  })
+  // $(document).on("mouseout", "", function(){
+  //   body.className = ""
+  // })
 
-  $(document).on("mouseout", "", function(){
-    body.className = ""
-  })
+  // $(document).on("mouseout", "", function(){
+  //   body.className = ""
+  // })
 
-  $(document).on("mouseout", "", function(){
-    body.className = ""
-  })
+  // $(document).on("mouseout", "", function(){
+  //   body.className = ""
+  // })
 
 
   //capturing the information from the add modal in the bars page
@@ -76,7 +76,7 @@ $(document).ready(function () {
     event.preventDefault()
     // var forum = $("#forumModal");
     var forumInput = $("#forumInput")[0].value;
-    var forumBarId = $("#barId")[0];
+    var forumBarId = $("#barId")[0].value;
     console.log(forumInput)
     console.log(forumBarId)
     // var barForum = ("#barNameForum");
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
-    $.post("/forum/"+ Post.barId, Post.body, function () {
+    $.post("/forum/"+ Post.barId, Post, function () {
       window.location.reload();
     })
   }
