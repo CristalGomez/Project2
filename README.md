@@ -18,22 +18,22 @@ heroku link
 # How it Works
 
 1. You select your city on the home page
-![Homepage](url)
+![Homepage](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
 
 1. You select your bar
-![BarPage]()
+![BarPage](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
 
 1. If you don't see your bar, you have the option to add it in
 *Note: If you add in a bar, expect the forum page to be blank*
-![AddBar]()
+![AddBar](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
 
 1. Go to the forum page of your bar
-![Forum]()
+![Forum](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
 
 1. If you notice that the most recent happy hour is not listed on the page, update the forum
-![update]()
+![update](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
 
-#Creators
+## Creators
 Cristal Gomez
 Tyler Leach
 Zohaib Dhuka
