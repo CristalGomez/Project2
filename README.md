@@ -4,6 +4,8 @@ DrinksOnUs allows our clients to find a forum page to their favorite bars in the
 # Technology Used
 1. Express.js
 1. Handlebars
+1. Bootstrap
+1. jQuery
 1. Node.js
 1. Sequelize
 1. Anime.js
@@ -13,7 +15,7 @@ DrinksOnUs allows our clients to find a forum page to their favorite bars in the
 1. Heroku
 
 # Demo
-heroku link
+https://dry-savannah-14331.herokuapp.com/
 
 # How it Works
 
@@ -21,17 +23,17 @@ heroku link
 ![Homepage](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
 
 1. You select your bar
-![BarPage](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
+![BarPage](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/barpage.png)
 
 1. If you don't see your bar, you have the option to add it in
 *Note: If you add in a bar, expect the forum page to be blank*
-![AddBar](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
+![AddBar](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/addBar.png)
 
 1. Go to the forum page of your bar
-![Forum](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
+![Forum](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/forum.png)
 
 1. If you notice that the most recent happy hour is not listed on the page, update the forum
-![update](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
+![update](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/update.png)
 
 ## Creators
 1. Cristal Gomez | [Github](https://github.com/CristalGomez)
