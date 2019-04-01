@@ -14,7 +14,8 @@ a:hover {
 .forum-container {
     background-color:rgb(102, 102, 102);
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
+    width: 1140px;
 }
 body.austin {
     background-size: cover;
@@ -158,6 +159,7 @@ img {
     background-color:rgb(102, 102, 102);
     border-color: black;
     margin-top: 1%;
+    width: 1000px;
 }
 
 .card-header{

@@ -1,3 +1,5 @@
+import moment = require("moment");
+
 $(document).ready(function () {
 
 
@@ -89,6 +91,7 @@ $(document).ready(function () {
     console.log(newForum);
     postForum(newForum);
   });
+
 
   //capturing the information from the update modal in the forum page
   function postForum(Post) {
