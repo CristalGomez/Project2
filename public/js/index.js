@@ -59,7 +59,7 @@ $(document).ready(function () {
  
 
   function submitBar(Bars) {
-    $.post("/api/bars/", Bars, function () {
+    $.post("/bars/", Bars, function () {
 
       window.location.reload()
     })
@@ -69,7 +69,7 @@ $(document).ready(function () {
     event.preventDefault()
     // var forum = $("#forumModal");
     var forumInput = $("#forumInput")[0].value;
-    var forumBarId = $("#barId")[0];
+    var forumBarId = $("#barId")[0].value;
     console.log(forumInput)
     console.log(forumBarId)
     // var barForum = ("#barNameForum");
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
     var newForum = {
       body: forumInput,
-      barId:forumBarId
+      barId: forumBarId
     };
     console.log(newForum);
     postForum(newForum);

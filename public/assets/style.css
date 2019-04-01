@@ -155,7 +155,8 @@ img {
 
 .card-body {
     background-color: lightgray;
-    border-color: black
+    border-color: black;
+    margin-top: 1%;
 }
 
 .card-header{
