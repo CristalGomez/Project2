@@ -61,8 +61,6 @@ $(document).ready(function () {
     console.log(newBar);
 
     submitBar(newBar)
-
-
   });
 
  
@@ -80,7 +78,6 @@ $(document).ready(function () {
     var forumInput = $("#forumInput")[0].value;
     var forumBarId = $("#barId")[0].value;
     console.log(forumInput)
-    console.log(forumBarId)
     // var barForum = ("#barNameForum");
 
 
