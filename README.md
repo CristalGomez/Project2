@@ -12,26 +12,18 @@ DrinksOnUs allows our clients to find a forum page to their favorite bars in the
 1. Path npm package
 1. Heroku
 
-# Demo
-heroku link
-
 # How it Works
-
 1. You select your city on the home page
-![Homepage](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
-
 1. You select your bar
-![BarPage](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
-
 1. If you don't see your bar, you have the option to add it in
 *Note: If you add in a bar, expect the forum page to be blank*
-![AddBar](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
-
 1. Go to the forum page of your bar
-![Forum](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
-
 1. If you notice that the most recent happy hour is not listed on the page, update the forum
-![update](https://github.com/CristalGomez/Project2/blob/cristal/public/assets/readmeImgs/home.png)
+
+# Demo
+![Demo](https://dry-savannah-14331.herokuapp.com/)
+![Video Demo](https://www.youtube.com/watch?v=2sTjN_WGXHA&feature=youtu.be)
+![Gif Demo](https://media.giphy.com/media/jtKAb54rue2zr7zWSY/giphy.gif)
 
 ## Creators
 1. Cristal Gomez | [Github](https://github.com/CristalGomez)
