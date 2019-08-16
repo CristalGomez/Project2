@@ -21,7 +21,8 @@ DrinksOnUs allows our clients to find a forum page to their favorite bars in the
 1. If you notice that the most recent happy hour is not listed on the page, update the forum
 
 # Demo
-
+[Demo](https://dry-savannah-14331.herokuapp.com/)
+[Video Demo](https://www.youtube.com/watch?v=2sTjN_WGXHA&feature=youtu.be)
 ![Gif Demo](https://media.giphy.com/media/jtKAb54rue2zr7zWSY/giphy.gif)
 
 ## Creators
